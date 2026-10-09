@@ -1,0 +1,21 @@
+model	predictor_definition	fixed_settings
+persistence	baseline_logit	baseline composition
+global_mean	none	training mean target logit
+celltype_mean	state	training group mean; global fallback
+intervention_celltype_mean	intervention + state	group mean; state then global fallback
+timebin_celltype_mean	time_bin + state	<=3 or >3 days; group mean; state then global fallback
+species_celltype_mean	species + state	group mean; state then global fallback
+agebin_celltype_mean	age_bin + state	<=12 or >12 months or unknown; group mean; state then global fallback
+ols_baseline	baseline_logit	non-intercept diagonal stabiliser 1e-7
+ols_context	coarse_cell_type + intervention + log_time + age_numeric + species	non-intercept diagonal stabiliser 1e-7
+ols_additive	baseline_logit + coarse_cell_type + intervention + log_time + age_numeric + species	non-intercept diagonal stabiliser 1e-7
+ols_interactions	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	non-intercept diagonal stabiliser 1e-7
+ridge_lambda_0.01	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	alpha=0;lambda=0.01;training-only glmnet standardisation
+ridge_lambda_0.1	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	alpha=0;lambda=0.1;training-only glmnet standardisation
+ridge_lambda_1	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	alpha=0;lambda=1;training-only glmnet standardisation
+ridge_lambda_10	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	alpha=0;lambda=10;training-only glmnet standardisation
+lasso_lambda_0.1	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	alpha=1;lambda=0.1;training-only glmnet standardisation
+elasticnet_lambda_0.1	baseline_logit * coarse_cell_type + intervention * coarse_cell_type + log_time * coarse_cell_type + age_numeric + species	alpha=0.5;lambda=0.1;training-only glmnet standardisation
+knn_k5	baseline_logit + coarse_cell_type + intervention + log_time + age_numeric + species	k=5 state rows;Euclidean;training centre/SD;constant SD=1
+neuralnet_hidden5	baseline_logit + coarse_cell_type + intervention + log_time + age_numeric + species (remove explicit intercept column)	size=5;linout=TRUE;decay=0.01;maxit=5000;seed=20260715;no extra input scaling
+xgboost_shallow	baseline_logit + coarse_cell_type + intervention + log_time + age_numeric + species (remove explicit intercept column)	objective=reg:squarederror;max_depth=2;eta=0.05;subsample=0.8;colsample_bytree=0.8;nrounds=100;nthread=1;seed=20260715;no early stopping

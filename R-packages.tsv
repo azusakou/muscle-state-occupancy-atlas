@@ -1,0 +1,11 @@
+package	version
+data.table	1.18.6.1
+Matrix	1.7.5
+glmnet	5.1
+nnet	7.3.20
+xgboost	3.2.1.1
+ggplot2	4.0.3
+patchwork	1.3.2
+scales	1.4.0
+ragg	1.5.2
+DESeq2	1.52.0

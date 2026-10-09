@@ -1,0 +1,293 @@
+[
+  {
+    "file": "data/sample_manifest.tsv",
+    "source": "metadata/sample_manifest.tsv",
+    "source_sha256": "1a20a77e98e0be9c4ad13dcd700056e9eff2f7c318669851b7588414ff545bc6",
+    "operation": "Column projection directly from the declared source; every retained field value, numeric text and row order preserved exactly.",
+    "exported_sha256": "68c73b14b19e1a81aaac3ff42d1708eddd5e4865f8f65c3842b05a0d8a7829a1",
+    "exported_rows": 2943,
+    "exported_columns": [
+      "dataset_id",
+      "sample_id",
+      "biological_unit_id",
+      "species",
+      "age_value",
+      "age_unit",
+      "muscle",
+      "assay",
+      "baseline_or_post",
+      "intervention",
+      "time_value",
+      "time_unit",
+      "coarse_cell_type",
+      "n_cells"
+    ],
+    "source_rows": 2943
+  },
+  {
+    "file": "data/registry.tsv",
+    "source": "metadata/dataset_registry.tsv",
+    "source_sha256": "a19b6e5243cebeff2fff706651b55cbce108f717179bd244b9ebce3372b87c9a",
+    "operation": "dataset_id and evidence_tier for six analysed discovery resources",
+    "exported_sha256": "a07541094b7248e4352a9a7fc1f8f869253750313c04c8bd518bc444ca97b2f5",
+    "exported_rows": 6,
+    "exported_columns": [
+      "dataset_id",
+      "evidence_tier"
+    ],
+    "source_rows": 18
+  },
+  {
+    "file": "data/future_tasks.tsv.gz",
+    "source": "results/tables/future_atlas/future_tasks.tsv.gz",
+    "source_sha256": "1419f552113702bca2c179a185a83cdce40f3708c927b11875047f29065d323b",
+    "operation": "Unused columns removed; retained numeric field text and row order unchanged. Only primary-task rows retained.",
+    "exported_sha256": "806fb1fc62d5478f243cec1fa00b71867ab229eae59473fa303e397f3488c74c",
+    "exported_rows": 480,
+    "exported_columns": [
+      "dataset_id",
+      "coarse_cell_type",
+      "biological_unit_id",
+      "species",
+      "age_value",
+      "age_unit",
+      "muscle",
+      "assay",
+      "baseline_or_post",
+      "intervention",
+      "time_value",
+      "time_unit",
+      "sample_id",
+      "n_cells",
+      "time_days",
+      "age_months",
+      "total_cells",
+      "proportion",
+      "baseline_proportion",
+      "baseline_sd",
+      "n_baseline_biological_units",
+      "baseline_cells",
+      "primary_task",
+      "temporal_link_type",
+      "evidence_tier",
+      "claim_scope"
+    ],
+    "source_rows": 576,
+    "upstream_export_operation": "byte-identical copy of archived task definitions"
+  },
+  {
+    "file": "data/transfer_predictions.tsv.gz",
+    "source": "results/tables/reference_transfer_validation/leave_one_animal_predictions.tsv.gz",
+    "source_sha256": "24a819679f48c31e78cf653e739f3df1db8456af6636e6d65bd44c4d5554a2ee",
+    "operation": "Column projection directly from the declared source; every retained field value, numeric text and row order preserved exactly.",
+    "exported_sha256": "014aac8bf1b7740d080caa81b3fd46842807c9e4d7a22abf80690e6a5f10b7ad",
+    "exported_rows": 29539,
+    "exported_columns": [
+      "held_out_animal",
+      "prediction_score",
+      "predicted",
+      "truth"
+    ],
+    "source_rows": 29539
+  },
+  {
+    "file": "data/spatial_gene_statistics.tsv.xz",
+    "source": "results/tables/GSE270703/paired_spatial_pseudobulk_deseq2.tsv",
+    "source_sha256": "5ce16465245ed1492a9423902268ccf0a00415de34860ed8b89edd2fc59c4e76",
+    "operation": "Column projection directly from the declared source; every retained field value, numeric text and row order preserved exactly.",
+    "exported_sha256": "9330afa1e40b20126a35f5389e05dac09146996c56947a93d8be2f27be75d448",
+    "exported_rows": 12441,
+    "exported_columns": [
+      "gene",
+      "log2FoldChange",
+      "padj",
+      "exact_signflip_p",
+      "exact_signflip_padj",
+      "log2FoldChange_excluding_PH078",
+      "padj_excluding_PH078"
+    ],
+    "source_rows": 12441
+  },
+  {
+    "file": "data/nmj_spots.tsv",
+    "source": "results/tables/GSE294765/spatial_nmj_spot_scores.tsv.gz",
+    "source_sha256": "89a3b1f4e3bceeea648db0593c527a2d7b5f3d6efbfb1019a8c0851c26c554db",
+    "operation": "Column projection directly from the declared source; every retained field value, numeric text and row order preserved exactly.",
+    "exported_sha256": "c056fac8dc5f9fcd1e9489d5bee882d1913dab94efdc9eb2d0b80cb38d602dc6",
+    "exported_rows": 5716,
+    "exported_columns": [
+      "sample_id",
+      "intervention",
+      "array_row",
+      "array_col",
+      "chrne_positive",
+      "terminal_schwann_score"
+    ],
+    "source_rows": 5716
+  },
+  {
+    "file": "data/human_paired_changes.tsv",
+    "source": "results/tables/GSE240061/paired_subject_composition_changes.tsv",
+    "source_sha256": "cd3237ace045c9270ca877959edfff60651ab3c74033b8a22aa2d6a7800ffb61",
+    "operation": "Column projection directly from the declared source; every retained field value, numeric text and row order preserved exactly.",
+    "exported_sha256": "221c7e0e0b8c5b2042437936ee16c7443166d1a1bf7003e3ad391bc4361731a6",
+    "exported_rows": 36,
+    "exported_columns": [
+      "subject",
+      "Group",
+      "coarse_cell_type",
+      "Post",
+      "Pre",
+      "post_minus_pre"
+    ],
+    "source_rows": 36
+  },
+  {
+    "file": "data/reference_qc_overlap.tsv",
+    "source": "data/derived/GSE183802/published_raw_qc_overlap.tsv",
+    "source_sha256": "3f8229bda0391962d532809dc3aee67408ee2b23f0a684a9e149fbe78c8786aa",
+    "operation": "Unused columns removed; retained numeric field text and row order unchanged.",
+    "exported_sha256": "0c26bab3a77884c96deea507763335f9770bcb7c8cddf6a65e686f096bf8aad4",
+    "exported_rows": 6,
+    "exported_columns": [
+      "sample_id",
+      "condition",
+      "n_publication_retained",
+      "n_our_qc_singlet_pass"
+    ],
+    "source_rows": 6,
+    "upstream_export_operation": "column projection only; row order and numeric precision retained"
+  },
+  {
+    "file": "data/qc.tsv",
+    "source": "data/derived/GSE183802/qc_summary.tsv",
+    "source_sha256": "ef7f48043a28a77d464629fc109d35525b1682f1ddd749fc3b4c966038a2e288",
+    "operation": "concatenate sample_id, n_input, n_final_pass and accession",
+    "exported_sha256": "a9e1c5380560f4a57f359a096a4516cd5f5f75cbd837c3303ec1bcfb1e02b29a",
+    "exported_rows": 63,
+    "exported_columns": [
+      "sample_id",
+      "n_input",
+      "n_final_pass",
+      "dataset"
+    ]
+  },
+  {
+    "file": "data/qc.tsv",
+    "source": "data/derived/GSE184413/qc_summary.tsv",
+    "source_sha256": "b1226c28e5f44078e750abfeb97a315ada26c20bce99f7ae2506705c6bf893b2",
+    "operation": "concatenate sample_id, n_input, n_final_pass and accession",
+    "exported_sha256": "a9e1c5380560f4a57f359a096a4516cd5f5f75cbd837c3303ec1bcfb1e02b29a",
+    "exported_rows": 63,
+    "exported_columns": [
+      "sample_id",
+      "n_input",
+      "n_final_pass",
+      "dataset"
+    ]
+  },
+  {
+    "file": "data/qc.tsv",
+    "source": "data/derived/GSE232106/qc_summary.tsv",
+    "source_sha256": "5029e188e4fd676f276c6d98aa9572d280a88bea456e862fb20aa835f22e8f35",
+    "operation": "concatenate sample_id, n_input, n_final_pass and accession",
+    "exported_sha256": "a9e1c5380560f4a57f359a096a4516cd5f5f75cbd837c3303ec1bcfb1e02b29a",
+    "exported_rows": 63,
+    "exported_columns": [
+      "sample_id",
+      "n_input",
+      "n_final_pass",
+      "dataset"
+    ]
+  },
+  {
+    "file": "data/qc.tsv",
+    "source": "data/derived/GSE294765/snrna_qc_summary.tsv",
+    "source_sha256": "e660107499fd5f95c3ac6de3c19a628bb8554bb79b69b4d2d9b99bc35543c62b",
+    "operation": "concatenate sample_id, n_input, n_final_pass and accession",
+    "exported_sha256": "a9e1c5380560f4a57f359a096a4516cd5f5f75cbd837c3303ec1bcfb1e02b29a",
+    "exported_rows": 63,
+    "exported_columns": [
+      "sample_id",
+      "n_input",
+      "n_final_pass",
+      "dataset"
+    ]
+  },
+  {
+    "file": "data/lineage_counts.rds",
+    "source": "data/derived/GSE241035/gold_bulk_collapsed_counts.rds",
+    "source_sha256": "bdb2a073e3339a748da842bc894e85a6028676263ac1b7b8e7133e8b00cf3298",
+    "operation": "Retain all 19 sample columns and sample/condition/batch/preparation metadata; omit 6762 all-zero genes and unused gene metadata. Gene identifiers remain in count-matrix row names.",
+    "original_source": "data/raw/GSE241035/GSE241035_all_transcript_counts.RDS.gz",
+    "original_source_sha256": "c4a8cadbd897d03b607a2458c60e3c20aa7e7efa692b7c5f893f2bda39616bcd",
+    "verification": "All 19 sample positions and original gene-collapsed counts were checked against the serialized source assay. This export retains every nonzero row unchanged and all 19 samples; analysis-specific filtering is still performed at runtime.",
+    "exported_dimensions": [
+      48623,
+      19
+    ],
+    "exported_sha256": "357066410c80ee0c1cc33ae840cc6e844712837b93f211305df88dd538d87e59",
+    "annotation_reference": "data/working/GSE294765/GSM8919214_Exp1_Plant_Basal_S1_features.tsv.gz",
+    "annotation_reference_sha256": "12fa2b62e02f248c56002407d8bf4cd30af8c267da7dc1cd38f4f6329058b69c",
+    "gene_mapping": "Strip transcript version and trailing -I from source IDs; sum counts by resulting stable ID in source order; map to symbols using the first matching stable ID in the reference; retain unmatched IDs and make duplicate symbols unique before removing all-zero rows."
+  },
+  {
+    "file": "data/denervation_published_counts.tsv",
+    "source": "data/derived/GSE183802/published_cell_type_counts.tsv",
+    "source_sha256": "0125920c07a0420e575f5589839dd9aec8b05eb1699f3717ed8930888cb251b1",
+    "operation": "Column projection of publication-selected nucleus counts; all six animals and all 13 published identity labels retained. Primary reference contains 29539 nuclei. No local QC subset restriction.",
+    "exported_sha256": "3b23bae460900c5b1d6d4f428f7dff9c3954ae5bdbc6db30b37d032202685b0d",
+    "exported_rows": 78,
+    "exported_columns": [
+      "sample_id",
+      "condition",
+      "published_cell_type",
+      "n_cells"
+    ],
+    "source_rows": 78
+  },
+  {
+    "file": "data/denervation_gene_statistics.tsv.xz",
+    "source": "results/tables/GSE183802/published_celltype_pseudobulk_deseq2.tsv.gz",
+    "source_sha256": "3afdb5b8dc4ad1376e244a4bd4bf850dfcbb7fb969b413125b157cd7a7a09fd7",
+    "operation": "Unused columns removed; retained numeric field text and row order unchanged. Lossless XZ compression.",
+    "exported_sha256": "1ffdb84c6a1c2718b1d1374c39f728ca939b4394a394bd3973cc9a6ba5749117",
+    "exported_rows": 52007,
+    "exported_columns": [
+      "gene",
+      "cell_type",
+      "log2FoldChange",
+      "padj"
+    ],
+    "source_rows": 52007,
+    "upstream_export_operation": "Four-column projection of all previously fitted per-animal DESeq2 gene statistics for all seven eligible published identity labels, including Unclassified. Original numeric field text retained exactly; no DESeq2 refit and no recomputation of adjusted P values in this compact package."
+  },
+  {
+    "file": "data/annotation_filter_counts.tsv",
+    "sources": [
+      {
+        "source": "data/derived/GSE232106/cell_metadata_annotated.tsv.gz",
+        "source_sha256": "84b97f6fa413504af017a2228d30ea872851cb62267b7e0d817ae6297f987dda"
+      },
+      {
+        "source": "data/derived/GSE184413/cell_metadata_annotated.tsv.gz",
+        "source_sha256": "1f5e3ec33d05a4ff5740d0b8077a7153cb2c9545b0e460c186925ef780c97183"
+      },
+      {
+        "source": "data/derived/GSE294765/cell_metadata_annotated.tsv.gz",
+        "source_sha256": "4bfc02f8fc76326cbe7c4c8254af8c0615ff5d189a81c2e5897a2faac3436711"
+      }
+    ],
+    "operation": "Exact per-sample/per-cell-type counts before and after the fixed score threshold and other_ambiguous exclusion. Individual scores omitted; thresholds cannot be changed using this table.",
+    "exported_rows": 484,
+    "exported_columns": [
+      "dataset_id",
+      "sample_id",
+      "coarse_cell_type",
+      "n_before",
+      "n_after",
+      "rule"
+    ],
+    "exported_sha256": "436e957cbae822eef68b6dedfb9d0cdb2863341f426eaf92b77009153dcfdd95"
+  }
+]

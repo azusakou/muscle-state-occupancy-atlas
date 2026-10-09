@@ -1,0 +1,7 @@
+sample_id	condition	n_publication_retained	n_our_qc_singlet_pass
+GSM5571584	control	6107	5637
+GSM5571585	control	4552	3830
+GSM5571586	control	5080	4773
+GSM5571587	denervation	5295	4989
+GSM5571588	denervation	4480	3707
+GSM5571589	denervation	4025	2308

@@ -1,0 +1,9 @@
+accession	dataset_id	tier	link_subtype	observable_rule	claim_boundary
+ZENODO19670721	fusion_population	Baseline	baseline only	No eligible post-intervention target	No temporal grade
+GSE232106	regeneration_lifespan	Silver	matched time series	Within-age structured injury series	Independent animals; primary tasks rely on geriatric baseline
+GSE294765	nmj_growth_atrophy	Silver	matched time series	Basal and 3/7-day intervention design	Spatial localisation does not constitute lineage
+GSE184413	disuse_mechanotherapy	Silver	matched recovery	Unloading/reloading with recovery treatment	Single eligible baseline per age stratum
+GSE183802	denervation	Bronze	independent snapshot	Independent controls and day-14 denervated animals	No same-animal pre/post link
+GSE240061	human_acute_endurance	Gold	paired subject	Verified participant-linked pre/post biopsies	Participant linkage is not same-cell tracking
+GSE241035	myonuclear_lineage	Gold	genetic lineage	Labels identify newly fused/pre-existing nuclei	KO/sham differs in loading and genotype/induction; batch overlap limited
+GSE270703	spatial_training	Gold	paired subject	Five participant-linked spatial pre/post pairs	Spots not independent participants or tracked cells
